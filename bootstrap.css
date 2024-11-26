@@ -1,0 +1,96 @@
+<style>
+    /* Custom Navbar Styling */
+    .navbar {
+        background: linear-gradient(to right, #f0f8ff, #e6f2ff);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+
+    .navbar-brand {
+        font-weight: 700;
+        color: #2c3e50 !important;
+        font-size: 1.5rem;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .nav-link {
+        color: #34495e !important;
+        font-weight: 500;
+        margin: 0 10px;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+
+    .nav-link:hover {
+        color: #3498db !important;
+        transform: scale(1.05);
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background-color: #3498db;
+        transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
+    }
+
+    .navbar-toggler {
+        border: none;
+        outline: none;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(52, 73, 94, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+
+    @media (max-width: 991px) {
+        .navbar-collapse {
+            background: linear-gradient(to right, #f0f8ff, #e6f2ff);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .nav-item {
+            margin: 10px 0;
+        }
+    }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="path/to/rupp-logo.png" alt="RUPP Logo" width="50" height="50" class="d-inline-block align-text-top me-2">
+            RUPP University
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#intro">Introduction RUPP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#his">History RUPP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#IT">Major IT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#po">Major Politics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#NE">News and Event</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

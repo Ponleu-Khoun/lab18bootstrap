@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUPP University</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <style>
+        /* Custom Navbar Styling */
+        .navbar {
+            background: linear-gradient(to right, #f0f8ff, #e6f2ff);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+    
+        .navbar-brand {
+            font-weight: 700;
+            color: #2c3e50 !important;
+            font-size: 1.5rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+    
+        .nav-link {
+            color: #34495e !important;
+            font-weight: 500;
+            margin: 0 10px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+    
+        .nav-link:hover {
+            color: #3498db !important;
+            transform: scale(1.05);
+        }
+    
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #3498db;
+            transition: width 0.3s ease;
+        }
+    
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    
+        .navbar-toggler {
+            border: none;
+            outline: none;
+        }
+    
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(52, 73, 94, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+    
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                background: linear-gradient(to right, #f0f8ff, #e6f2ff);
+                padding: 15px;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+    
+            .nav-item {
+                margin: 10px 0;
+            }
+            /* Custom Welcome Section Styling */
+
+    .welcome-section {
+
+background: linear-gradient(135deg, #f0f8ff, #e6f2ff);
+
+padding: 50px 0;
+
+border-radius: 15px;
+
+box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+position: relative;
+
+overflow: hidden;
+
+}
+
+
+.welcome-title {
+
+font-weight: 700;
+
+color: #2c3e50;
+
+margin-bottom: 30px;
+
+position: relative;
+
+text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+
+}
+
+
+.welcome-title::after {
+
+content: '';
+
+position: absolute;
+
+bottom: -10px;
+
+left: 50%;
+
+transform: translateX(-50%);
+
+width: 100px;
+
+height: 4px;
+
+background: linear-gradient(to right, #3498db, #2ecc71);
+
+border-radius: 2px;
+
+}
+
+
+.welcome-image:hover {
+
+max-width: 800px;
+
+margin: 0 auto;
+
+border-radius: 15px;
+
+transition: all 0.3s ease;
+
+box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+
+}
+
+
+.welcome-image:hover {
+
+transform: scale(1.02);
+
+box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+
+}
+
+
+.welcome-text {
+
+max-width: 800px;
+
+margin: 30px auto;
+
+color: #34495e;
+
+font-size: 1.1rem;
+
+line-height: 1.6;
+
+text-align: center;
+
+position: relative;
+
+}
+
+
+.welcome-text::before,
+
+.welcome-text::after {
+
+content: '"';
+
+position: absolute;
+
+font-size: 3rem;
+
+color: #3498db;
+
+opacity: 0.3;
+
+}
+
+
+.welcome-text::before {
+
+top: -20px;
+
+left: -30px;
+
+}
+
+
+.welcome-text::after {
+
+bottom: -20px;
+
+right: -30px;
+
+}
+
+
+/* Subtle Background Animation */
+
+@keyframes gradient-shift {
+
+0% {background-position: 0% 50%;}
+
+50% {background-position: 100% 50%;}
+
+100% {background-position: 0% 50%;}
+
+}
+
+
+.welcome-section::before {
+
+content: '';
+
+position: absolute;
+
+top: 0;
+
+left: 0;
+
+right: 0;
+
+bottom: 0;
+
+background: linear-gradient(45deg, #f0f8ff, #e6f2ff, #d1e8ff, #c0ddff);
+
+background-size: 400% 400%;
+
+opacity: 0.3;
+
+z-index: -1;
+
+animation: gradient-shift 15s ease infinite;
+
+}
+        }
+    </style>
+    
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="path/to/rupp-logo.png" alt="RUPP Logo" width="50" height="50" class="d-inline-block align-text-top me-2">
+                RUPP University
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#intro">Introduction RUPP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#his">History RUPP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#IT">Major IT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#po">Major Politics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#NE">News and Event</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+
+        <div class="welcome-section">
+    
+            <h1 class="text-center welcome-title">Welcome to RUPP University</h1>
+    
+    
+            <div class="text-center">
+    
+                <img 
+    
+                    src="lolo.jpg" 
+    
+                    alt="Welcome to RUPP University" 
+    
+                    class="img-fluid rounded welcome-image"
+    
+                >
+    
+            </div>
+    
+    
+            <p class="welcome-text">
+    
+                The Royal University of Phnom Penh (RUPP) stands as a beacon of academic excellence 
+    
+                and innovation. Established in 1960, we are committed to nurturing the brightest minds 
+    
+                and shaping the future leaders of Cambodia through comprehensive education, 
+    
+                cutting-edge research, and a transformative learning experience.
+    
+            </p>
+    
+        </div>
+    
+    </div>
+    
+
+    <h2 id="intro">Introduction RUPP</h2>
+    <img src="ru1.jpg" class="img-fluid" alt="Introduction Image">
+    <p>
+        The Royal University of Phnom Penh (RUPP) is Cambodia's oldest and largest university, established in 1960. It plays a crucial role in the development of higher education in the country. RUPP offers a diverse range of programs across various fields, including social sciences, humanities, and natural sciences. The university is committed to providing quality education and fostering research that contributes to national development. With a focus on innovation and academic excellence, RUPP aims to prepare students for the challenges of the modern world. The university also emphasizes community engagement and strives to enhance the social well-being of the Cambodian population. RUPP's mission is to promote a culture of learning and critical thinking among its students, empowering them to become responsible citizens and leaders in their respective fields. The university's diverse academic environment encourages collaboration and the exchange of ideas, making it a vibrant hub for intellectual growth and development.
+    </p>
+
+    <h2 id="his">History RUPP</h2>
+    <img src="ru.jpg" class="img-fluid" alt="History Image">
+    <p>
+        RUPP has a rich history that reflects the socio-political changes in Cambodia. Initially founded as a response to the need for higher education, the university has undergone significant transformations since its inception. During the Khmer Rouge regime, the university faced closure, and many intellectuals were persecuted. However, after the fall of the regime, RUPP was reestablished in 1993 and has since played a pivotal role in rebuilding the country's educational landscape. The university has expanded its programs and facilities, adapting to the evolving needs of society. Today, RUPP is recognized as a leading institution in Cambodia, contributing to the development of human resources and providing a platform for academic collaboration both nationally and internationally. The university's resilience and commitment to education continue to inspire generations of students. As it moves forward, RUPP remains dedicated to enhancing its academic offerings and fostering a spirit of inquiry and innovation among its students.
+    </p>
+
+    <h2 id="IT">Major IT</h2>
+    <img src="IT.jpg" class="img-fluid" alt="IT Major Image">
+    <p>
+        The Information Technology (IT) program at RUPP is designed to equip students with the skills and knowledge needed to thrive in the rapidly evolving tech landscape. The curriculum covers a wide range of topics, including software development, network management, cybersecurity, and data analysis. Students engage in hands-on projects and collaborate with industry partners to gain practical experience. The program emphasizes critical thinking and problem-solving skills
+        </p>
+
+        <h2 id="NE">News and Events Coming Soon</h2>
+        <img src="E-N.jpg" class="img-fluid" alt="News and Events Image">
+        <p>
+            RUPP University is excited to announce an upcoming series of engaging events and academic activities for the upcoming semester. Our campus will host multiple international conferences, student symposiums, and innovative research showcases. Upcoming highlights include the Annual Tech Innovation Summit, featuring keynote speakers from leading global technology companies, and the International Development Research Conference, which will bring together scholars and policymakers from across Southeast Asia. Student-led initiatives such as the Entrepreneurship Bootcamp and Sustainable Development Workshop are also in the planning stages. 
+        
+            The university is committed to providing comprehensive learning experiences beyond traditional classroom settings. Upcoming workshops will focus on emerging technologies, digital transformation, and sustainable development strategies. Cultural events, including art exhibitions, music performances, and international student exchange programs, are designed to promote cross-cultural understanding and global perspectives. Career development seminars and job recruitment fairs will connect students with potential employers, helping them bridge academic knowledge with professional opportunities.
+        
+            Research enthusiasts can look forward to interdisciplinary research presentations, where faculty and students will showcase groundbreaking projects in fields like artificial intelligence, climate change adaptation, and social innovation. RUPP continues to foster an environment of intellectual curiosity, innovation, and collaborative learning, preparing students to become future leaders and change-makers in their respective fields.
+        </p>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
